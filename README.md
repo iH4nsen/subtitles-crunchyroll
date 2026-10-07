@@ -1,6 +1,5 @@
 [English](#english) · [Português](#português)
 ![Subtitle settings panel open on the Crunchyroll website / Painel de ajustes de legendas aberto no site da Crunchyroll](screenshots/extension-on-crunchyroll.jpg)
-![Close-up of the language, size, text color, font, and background settings / Detalhe das opções de idioma, tamanho, cor do texto, fonte e fundo](screenshots/settings-panel.jpg)
 
 ---
 
