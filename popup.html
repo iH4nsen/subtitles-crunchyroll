@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title data-i18n="popupTitle">Ajustar legendas</title>
+    <link rel="stylesheet" href="popup.css">
+    <script src="dropdown.js" defer></script>
+    <script src="popup.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1 data-i18n="popupTitle">Ajustar legendas</h1>
+
+      <section>
+        <label for="language" data-i18n="language">Idioma</label>
+        <select id="language">
+          <option value="auto" data-i18n="languageAuto">Automático</option>
+          <option value="pt-BR">Português (Brasil)</option>
+          <option value="en-US">English</option>
+          <option value="es-419">Español (América Latina)</option>
+          <option value="es-ES">Español (España)</option>
+          <option value="fr-FR">Français</option>
+          <option value="de-DE">Deutsch</option>
+          <option value="it-IT">Italiano</option>
+          <option value="ja-JP">日本語</option>
+        </select>
+        <div class="control-heading">
+          <label for="scale" data-i18n="size">Tamanho</label>
+          <output id="scale-value" for="scale">100%</output>
+        </div>
+        <input id="scale" type="range" min="100" max="250" step="10" value="100">
+
+        <div class="field">
+          <span class="field-label" id="color-label" data-i18n="textColor">Cor do texto</span>
+          <div class="swatches" role="radiogroup" aria-labelledby="color-label">
+            <label class="swatch" data-i18n-title="colorOriginal" title="Original"><input type="radio" name="color" value="original"><span class="swatch-dot swatch-original"></span><span class="visually-hidden" data-i18n="colorOriginal">Original</span></label>
+            <label class="swatch" data-i18n-title="colorWhite" title="Branco"><input type="radio" name="color" value="#FFFFFF"><span class="swatch-dot" style="--swatch: #FFFFFF"></span><span class="visually-hidden" data-i18n="colorWhite">Branco</span></label>
+            <label class="swatch" data-i18n-title="colorYellow" title="Amarelo"><input type="radio" name="color" value="#FFE14D"><span class="swatch-dot" style="--swatch: #FFE14D"></span><span class="visually-hidden" data-i18n="colorYellow">Amarelo</span></label>
+            <label class="swatch" data-i18n-title="colorCyan" title="Ciano"><input type="radio" name="color" value="#7FE7FF"><span class="swatch-dot" style="--swatch: #7FE7FF"></span><span class="visually-hidden" data-i18n="colorCyan">Ciano</span></label>
+            <label class="swatch" data-i18n-title="colorGreen" title="Verde"><input type="radio" name="color" value="#9CFF8A"><span class="swatch-dot" style="--swatch: #9CFF8A"></span><span class="visually-hidden" data-i18n="colorGreen">Verde</span></label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="font" data-i18n="font">Fonte</label>
+          <select id="font">
+            <option value="original" data-i18n="fontOriginal">Original do episódio</option>
+            <option value="atkinson-hyperlegible" data-i18n="fontEasyRead" style="font-family: 'Atkinson Hyperlegible'">Leitura fácil</option>
+            <option value="lato" data-i18n="fontModern" style="font-family: 'Lato'">Moderna</option>
+            <option value="varela-round" data-i18n="fontRounded" style="font-family: 'Varela Round'">Arredondada</option>
+            <option value="pt-serif" data-i18n="fontSerif" style="font-family: 'PT Serif'">Serifada</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <span class="field-label" id="background-label" data-i18n="background">Fundo</span>
+          <div class="swatches" role="radiogroup" aria-labelledby="background-label">
+            <label class="swatch" data-i18n-title="backgroundOriginal" title="Original (contorno)"><input type="radio" name="background" value="original"><span class="swatch-dot swatch-original"></span><span class="visually-hidden" data-i18n="backgroundOriginal">Original (contorno)</span></label>
+            <label class="swatch" data-i18n-title="backgroundBlack" title="Preto"><input type="radio" name="background" value="#000000"><span class="swatch-dot" style="--swatch: #000000"></span><span class="visually-hidden" data-i18n="backgroundBlack">Preto</span></label>
+            <label class="swatch" data-i18n-title="backgroundGray" title="Cinza"><input type="radio" name="background" value="#3C3C46"><span class="swatch-dot" style="--swatch: #3C3C46"></span><span class="visually-hidden" data-i18n="backgroundGray">Cinza</span></label>
+            <label class="swatch" data-i18n-title="backgroundNavy" title="Azul-marinho"><input type="radio" name="background" value="#0B1E3F"><span class="swatch-dot" style="--swatch: #0B1E3F"></span><span class="visually-hidden" data-i18n="backgroundNavy">Azul-marinho</span></label>
+          </div>
+        </div>
+
+        <div class="control-heading">
+          <label for="transparency" data-i18n="backgroundTransparency">Transparência do fundo</label>
+          <output id="transparency-value" for="transparency">0%</output>
+        </div>
+        <input id="transparency" type="range" min="0" max="90" step="10" value="0">
+        <p id="playback-status" class="note" role="status" aria-live="polite"></p>
+      </section>
+
+      <button id="reset" type="button" data-i18n="reset">Restaurar padrão</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </main>
+  </body>
+</html>

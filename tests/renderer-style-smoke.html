@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><title>ASS style smoke test</title></head>
+  <body style="background:#6b8e23">
+    <p id="status">starting</p>
+    <canvas id="captions" width="640" height="360"></canvas>
+    <script src="../subtitle-format.js"></script>
+    <script src="../vendor/libass-wasm/subtitles-octopus.js"></script>
+    <script>
+      const source = `[Script Info]
+ScriptType: v4.00+
+PlayResX: 640
+PlayResY: 360
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Arial,40,&H00FFFFFF,&H00FFFFFF,&H00000000,&H64000000,0,0,0,0,100,100,0,0,1,3,1,2,20,20,20,1
+Style: Signs,Arial,28,&H0000FFFF,&H00FFFFFF,&H00000000,&H00000000,0,0,0,0,100,100,0,0,1,2,0,8,20,20,20,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,Default,,0,0,0,,{\\c&H0000FF&}Legenda ajustada Il1
+Dialogue: 0,0:00:00.00,0:00:10.00,Signs,,0,0,0,,PLACA ORIGINAL
+`;
+      const params = new URLSearchParams(location.search);
+      const fonts = {
+        "atkinson-hyperlegible": { family: "Atkinson Hyperlegible", file: "AtkinsonHyperlegible-Regular.ttf" },
+        lato: { family: "Lato", file: "Lato-Regular.ttf" },
+        "varela-round": { family: "Varela Round", file: "VarelaRound-Regular.ttf" },
+        "pt-serif": { family: "PT Serif", file: "PTSerif-Regular.ttf" }
+      };
+      const fontDir = params.get("font") || "atkinson-hyperlegible";
+      const font = fonts[fontDir];
+      const content = CrSubtitleFormat.styleAss(source, {
+        color: "#FFE14D",
+        font: font.family,
+        background: "#000000",
+        backgroundTransparency: 30
+      });
+      const renderer = new SubtitlesOctopus({
+        canvas: document.getElementById("captions"),
+        subContent: content,
+        workerUrl: "../vendor/libass-wasm/subtitles-octopus-worker.js",
+        legacyWorkerUrl: "../vendor/libass-wasm/subtitles-octopus-worker-legacy.js",
+        fallbackFont: new URL("../vendor/libass-wasm/default.woff2", location.href).href,
+        fonts: [new URL(`../vendor/fonts/${fontDir}/${font.file}`, location.href).href],
+        onReady: () => { renderer.setCurrentTime(2); },
+        onError: (error) => { document.getElementById("status").textContent = "error: " + error; }
+      });
+      const probe = setInterval(() => {
+        const pixels = document.getElementById("captions").getContext("2d").getImageData(0, 0, 640, 360).data;
+        for (let i = 3; i < pixels.length; i += 4) {
+          if (pixels[i]) {
+            document.getElementById("status").textContent = "rendered";
+            clearInterval(probe);
+            break;
+          }
+        }
+      }, 200);
+    </script>
+  </body>
+</html>

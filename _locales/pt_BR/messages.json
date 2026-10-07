@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Ajustar legendas para Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Exibe legendas separadas com tamanho e idioma próprios."
+  },
+  "popupTitle": {
+    "message": "Ajustar legendas"
+  },
+  "language": {
+    "message": "Idioma"
+  },
+  "languageAuto": {
+    "message": "Automático"
+  },
+  "size": {
+    "message": "Tamanho"
+  },
+  "textColor": {
+    "message": "Cor do texto"
+  },
+  "colorOriginal": {
+    "message": "Original"
+  },
+  "colorWhite": {
+    "message": "Branco"
+  },
+  "colorYellow": {
+    "message": "Amarelo"
+  },
+  "colorCyan": {
+    "message": "Ciano"
+  },
+  "colorGreen": {
+    "message": "Verde"
+  },
+  "font": {
+    "message": "Fonte"
+  },
+  "fontOriginal": {
+    "message": "Original do episódio"
+  },
+  "fontEasyRead": {
+    "message": "Leitura fácil"
+  },
+  "fontModern": {
+    "message": "Moderna"
+  },
+  "fontRounded": {
+    "message": "Arredondada"
+  },
+  "fontSerif": {
+    "message": "Serifada"
+  },
+  "background": {
+    "message": "Fundo"
+  },
+  "backgroundOriginal": {
+    "message": "Original (contorno)"
+  },
+  "backgroundBlack": {
+    "message": "Preto"
+  },
+  "backgroundGray": {
+    "message": "Cinza"
+  },
+  "backgroundNavy": {
+    "message": "Azul-marinho"
+  },
+  "backgroundTransparency": {
+    "message": "Transparência do fundo"
+  },
+  "reset": {
+    "message": "Restaurar padrão"
+  },
+  "statusNoTrack": {
+    "message": "Sem legenda separada neste idioma."
+  },
+  "statusNoCleanVideo": {
+    "message": "Episódio sem vídeo limpo disponível."
+  },
+  "statusReloadRequired": {
+    "message": "Recarregue o episódio."
+  },
+  "statusTrackError": {
+    "message": "Falha ao carregar a legenda."
+  },
+  "statusRendererError": {
+    "message": "Falha ao exibir a legenda."
+  },
+  "saveError": {
+    "message": "Não foi possível salvar. Tente novamente."
+  },
+  "rendererFrameTitle": {
+    "message": "Legendas ampliadas"
+  }
+}

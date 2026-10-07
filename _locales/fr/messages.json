@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Ajuster les sous-titres pour Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Affiche des sous-titres séparés avec leur propre taille et langue."
+  },
+  "popupTitle": {
+    "message": "Ajuster les sous-titres"
+  },
+  "language": {
+    "message": "Langue"
+  },
+  "languageAuto": {
+    "message": "Automatique"
+  },
+  "size": {
+    "message": "Taille"
+  },
+  "textColor": {
+    "message": "Couleur du texte"
+  },
+  "colorOriginal": {
+    "message": "Originale"
+  },
+  "colorWhite": {
+    "message": "Blanc"
+  },
+  "colorYellow": {
+    "message": "Jaune"
+  },
+  "colorCyan": {
+    "message": "Cyan"
+  },
+  "colorGreen": {
+    "message": "Vert"
+  },
+  "font": {
+    "message": "Police"
+  },
+  "fontOriginal": {
+    "message": "Celle de l'épisode"
+  },
+  "fontEasyRead": {
+    "message": "Lecture facile"
+  },
+  "fontModern": {
+    "message": "Moderne"
+  },
+  "fontRounded": {
+    "message": "Arrondie"
+  },
+  "fontSerif": {
+    "message": "Avec empattements"
+  },
+  "background": {
+    "message": "Fond"
+  },
+  "backgroundOriginal": {
+    "message": "Original (contour)"
+  },
+  "backgroundBlack": {
+    "message": "Noir"
+  },
+  "backgroundGray": {
+    "message": "Gris"
+  },
+  "backgroundNavy": {
+    "message": "Bleu marine"
+  },
+  "backgroundTransparency": {
+    "message": "Transparence du fond"
+  },
+  "reset": {
+    "message": "Rétablir les valeurs par défaut"
+  },
+  "statusNoTrack": {
+    "message": "Aucun sous-titre séparé dans cette langue."
+  },
+  "statusNoCleanVideo": {
+    "message": "Aucune vidéo sans sous-titres incrustés pour cet épisode."
+  },
+  "statusReloadRequired": {
+    "message": "Rechargez l'épisode."
+  },
+  "statusTrackError": {
+    "message": "Échec du chargement des sous-titres."
+  },
+  "statusRendererError": {
+    "message": "Échec de l'affichage des sous-titres."
+  },
+  "saveError": {
+    "message": "Impossible d'enregistrer. Réessayez."
+  },
+  "rendererFrameTitle": {
+    "message": "Sous-titres agrandis"
+  }
+}

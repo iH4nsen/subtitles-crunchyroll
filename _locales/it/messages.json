@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Regola sottotitoli per Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Mostra sottotitoli separati con dimensione e lingua proprie."
+  },
+  "popupTitle": {
+    "message": "Regola sottotitoli"
+  },
+  "language": {
+    "message": "Lingua"
+  },
+  "languageAuto": {
+    "message": "Automatica"
+  },
+  "size": {
+    "message": "Dimensione"
+  },
+  "textColor": {
+    "message": "Colore del testo"
+  },
+  "colorOriginal": {
+    "message": "Originale"
+  },
+  "colorWhite": {
+    "message": "Bianco"
+  },
+  "colorYellow": {
+    "message": "Giallo"
+  },
+  "colorCyan": {
+    "message": "Ciano"
+  },
+  "colorGreen": {
+    "message": "Verde"
+  },
+  "font": {
+    "message": "Carattere"
+  },
+  "fontOriginal": {
+    "message": "Originale dell'episodio"
+  },
+  "fontEasyRead": {
+    "message": "Lettura facile"
+  },
+  "fontModern": {
+    "message": "Moderno"
+  },
+  "fontRounded": {
+    "message": "Arrotondato"
+  },
+  "fontSerif": {
+    "message": "Con grazie"
+  },
+  "background": {
+    "message": "Sfondo"
+  },
+  "backgroundOriginal": {
+    "message": "Originale (contorno)"
+  },
+  "backgroundBlack": {
+    "message": "Nero"
+  },
+  "backgroundGray": {
+    "message": "Grigio"
+  },
+  "backgroundNavy": {
+    "message": "Blu navy"
+  },
+  "backgroundTransparency": {
+    "message": "Trasparenza dello sfondo"
+  },
+  "reset": {
+    "message": "Ripristina predefiniti"
+  },
+  "statusNoTrack": {
+    "message": "Nessun sottotitolo separato in questa lingua."
+  },
+  "statusNoCleanVideo": {
+    "message": "Nessun video pulito disponibile per questo episodio."
+  },
+  "statusReloadRequired": {
+    "message": "Ricarica l'episodio."
+  },
+  "statusTrackError": {
+    "message": "Impossibile caricare il sottotitolo."
+  },
+  "statusRendererError": {
+    "message": "Impossibile mostrare il sottotitolo."
+  },
+  "saveError": {
+    "message": "Impossibile salvare. Riprova."
+  },
+  "rendererFrameTitle": {
+    "message": "Sottotitoli ingranditi"
+  }
+}

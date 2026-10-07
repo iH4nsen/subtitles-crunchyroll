@@ -1,0 +1,50 @@
+{
+  "manifest_version": 3,
+  "name": "__MSG_extName__",
+  "version": "2.2.0",
+  "description": "__MSG_extDescription__",
+  "default_locale": "en",
+  "permissions": ["storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self';"
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_title": "__MSG_popupTitle__",
+    "default_icon": "icons/icon48.png",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.crunchyroll.com/*"],
+      "js": ["playback-hook.js"],
+      "run_at": "document_start",
+      "world": "MAIN"
+    },
+    {
+      "matches": ["https://www.crunchyroll.com/*"],
+      "css": ["content.css"],
+      "js": ["content.js", "subtitle-format.js", "independent-subtitles.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "renderer.html",
+        "renderer-frame.js",
+        "vendor/libass-wasm/subtitles-octopus.js",
+        "vendor/libass-wasm/subtitles-octopus-worker.js",
+        "vendor/libass-wasm/subtitles-octopus-worker.wasm",
+        "vendor/libass-wasm/subtitles-octopus-worker-legacy.js",
+        "vendor/libass-wasm/default.woff2",
+        "vendor/fonts/*"
+      ],
+      "matches": ["https://www.crunchyroll.com/*"]
+    }
+  ]
+}

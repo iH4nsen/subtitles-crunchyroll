@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Crunchyroll 字幕調整"
+  },
+  "extDescription": {
+    "message": "サイズと言語を個別に設定した字幕を表示します。"
+  },
+  "popupTitle": {
+    "message": "字幕を調整"
+  },
+  "language": {
+    "message": "言語"
+  },
+  "languageAuto": {
+    "message": "自動"
+  },
+  "size": {
+    "message": "サイズ"
+  },
+  "textColor": {
+    "message": "文字の色"
+  },
+  "colorOriginal": {
+    "message": "オリジナル"
+  },
+  "colorWhite": {
+    "message": "白"
+  },
+  "colorYellow": {
+    "message": "黄"
+  },
+  "colorCyan": {
+    "message": "シアン"
+  },
+  "colorGreen": {
+    "message": "緑"
+  },
+  "font": {
+    "message": "フォント"
+  },
+  "fontOriginal": {
+    "message": "エピソードの既定"
+  },
+  "fontEasyRead": {
+    "message": "読みやすい"
+  },
+  "fontModern": {
+    "message": "モダン"
+  },
+  "fontRounded": {
+    "message": "丸ゴシック"
+  },
+  "fontSerif": {
+    "message": "明朝体"
+  },
+  "background": {
+    "message": "背景"
+  },
+  "backgroundOriginal": {
+    "message": "オリジナル（縁取り）"
+  },
+  "backgroundBlack": {
+    "message": "黒"
+  },
+  "backgroundGray": {
+    "message": "グレー"
+  },
+  "backgroundNavy": {
+    "message": "紺"
+  },
+  "backgroundTransparency": {
+    "message": "背景の透明度"
+  },
+  "reset": {
+    "message": "初期設定に戻す"
+  },
+  "statusNoTrack": {
+    "message": "この言語の個別字幕はありません。"
+  },
+  "statusNoCleanVideo": {
+    "message": "このエピソードには字幕なしの映像がありません。"
+  },
+  "statusReloadRequired": {
+    "message": "エピソードを再読み込みしてください。"
+  },
+  "statusTrackError": {
+    "message": "字幕を読み込めませんでした。"
+  },
+  "statusRendererError": {
+    "message": "字幕を表示できませんでした。"
+  },
+  "saveError": {
+    "message": "保存できませんでした。もう一度お試しください。"
+  },
+  "rendererFrameTitle": {
+    "message": "拡大字幕"
+  }
+}

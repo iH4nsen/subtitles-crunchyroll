@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Ajustar subtítulos para Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Muestra subtítulos separados con tamaño e idioma propios."
+  },
+  "popupTitle": {
+    "message": "Ajustar subtítulos"
+  },
+  "language": {
+    "message": "Idioma"
+  },
+  "languageAuto": {
+    "message": "Automático"
+  },
+  "size": {
+    "message": "Tamaño"
+  },
+  "textColor": {
+    "message": "Color del texto"
+  },
+  "colorOriginal": {
+    "message": "Original"
+  },
+  "colorWhite": {
+    "message": "Blanco"
+  },
+  "colorYellow": {
+    "message": "Amarillo"
+  },
+  "colorCyan": {
+    "message": "Cian"
+  },
+  "colorGreen": {
+    "message": "Verde"
+  },
+  "font": {
+    "message": "Fuente"
+  },
+  "fontOriginal": {
+    "message": "Original del episodio"
+  },
+  "fontEasyRead": {
+    "message": "Lectura fácil"
+  },
+  "fontModern": {
+    "message": "Moderna"
+  },
+  "fontRounded": {
+    "message": "Redondeada"
+  },
+  "fontSerif": {
+    "message": "Con serifa"
+  },
+  "background": {
+    "message": "Fondo"
+  },
+  "backgroundOriginal": {
+    "message": "Original (contorno)"
+  },
+  "backgroundBlack": {
+    "message": "Negro"
+  },
+  "backgroundGray": {
+    "message": "Gris"
+  },
+  "backgroundNavy": {
+    "message": "Azul marino"
+  },
+  "backgroundTransparency": {
+    "message": "Transparencia del fondo"
+  },
+  "reset": {
+    "message": "Restablecer valores"
+  },
+  "statusNoTrack": {
+    "message": "No hay subtítulo separado en este idioma."
+  },
+  "statusNoCleanVideo": {
+    "message": "Este episodio no tiene video limpio disponible."
+  },
+  "statusReloadRequired": {
+    "message": "Vuelve a cargar el episodio."
+  },
+  "statusTrackError": {
+    "message": "No se pudo cargar el subtítulo."
+  },
+  "statusRendererError": {
+    "message": "No se pudo mostrar el subtítulo."
+  },
+  "saveError": {
+    "message": "No se pudo guardar. Inténtalo de nuevo."
+  },
+  "rendererFrameTitle": {
+    "message": "Subtítulos ampliados"
+  }
+}

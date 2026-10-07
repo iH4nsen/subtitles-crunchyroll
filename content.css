@@ -1,0 +1,14 @@
+/* Apenas os elementos de legenda do player recebem a ampliação. */
+html[data-cr-subtitle-scale] .bmpui-ui-subtitle-label,
+html[data-cr-subtitle-scale] .vjs-text-track-cue,
+html[data-cr-subtitle-scale] .jw-text-track-cue,
+html[data-cr-subtitle-scale] .shaka-text-container > span,
+html[data-cr-subtitle-scale] [data-testid="subtitle-text"],
+html[data-cr-subtitle-scale] [data-testid="caption-text"] {
+  scale: var(--cr-subtitle-scale) !important;
+  transform-origin: center bottom !important;
+}
+
+html[data-cr-subtitle-scale] video::cue {
+  font-size: var(--cr-subtitle-size) !important;
+}

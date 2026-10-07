@@ -1,0 +1,283 @@
+/* Fontes empacotadas, usadas para mostrar cada opção de fonte com a própria aparência. */
+@font-face { font-family: "Atkinson Hyperlegible"; src: url("vendor/fonts/atkinson-hyperlegible/AtkinsonHyperlegible-Regular.ttf"); }
+@font-face { font-family: "Lato"; src: url("vendor/fonts/lato/Lato-Regular.ttf"); }
+@font-face { font-family: "Varela Round"; src: url("vendor/fonts/varela-round/VarelaRound-Regular.ttf"); }
+@font-face { font-family: "PT Serif"; src: url("vendor/fonts/pt-serif/PTSerif-Regular.ttf"); }
+
+/* Neumorfismo escuro: as superfícies têm a mesma cor do fundo e ganham volume
+   com uma sombra escura embaixo à direita e uma clara em cima à esquerda. */
+:root {
+  color-scheme: dark;
+  --bg: #16161a;
+  --shadow-dark: #08080a;
+  --shadow-light: #25252c;
+  --text: #ececf1;
+  --muted: #9a9aa5;
+  --accent: #f47521;
+  --accent-light: #ffa45c;
+  --raised: 5px 5px 12px var(--shadow-dark), -5px -5px 12px var(--shadow-light);
+  --raised-small: 3px 3px 7px var(--shadow-dark), -3px -3px 7px var(--shadow-light);
+  --inset: inset 3px 3px 7px var(--shadow-dark), inset -3px -3px 7px var(--shadow-light);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  width: 320px;
+  overflow-x: hidden;
+  margin: 0;
+  color: var(--text);
+  background: var(--bg);
+}
+
+main { padding: 18px 20px 14px; }
+
+h1 {
+  margin: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+h1 + section { margin-top: 14px; }
+
+label {
+  display: block;
+  padding-left: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Lista de idiomas personalizada (dropdown.js). */
+.dropdown {
+  position: relative;
+  margin-top: 8px;
+}
+
+.dropdown-button {
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 10px 44px 10px 20px;
+  background: var(--bg) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.5l5 5 5-5' fill='none' stroke='%239a9aa5' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") no-repeat right 20px center;
+  font-weight: 400;
+  text-align: left;
+}
+
+.dropdown-button:hover { color: var(--text); }
+
+.dropdown.open .dropdown-button {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 6.5l5-5 5 5' fill='none' stroke='%23f47521' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  box-shadow: var(--inset);
+}
+
+.dropdown-list {
+  position: absolute;
+  z-index: 10;
+  top: calc(100% + 12px);
+  left: 0;
+  right: 0;
+  max-height: 220px;
+  margin: 0;
+  padding: 8px;
+  overflow-y: auto;
+  list-style: none;
+  border-radius: 20px;
+  background: var(--bg);
+  box-shadow: var(--raised);
+  scrollbar-width: thin;
+  scrollbar-color: var(--shadow-light) transparent;
+}
+
+.dropdown.up .dropdown-list {
+  top: auto;
+  bottom: calc(100% + 12px);
+}
+
+.dropdown-list:focus { outline: none; }
+
+.dropdown-option {
+  position: relative;
+  padding: 9px 14px 9px 30px;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  cursor: pointer;
+}
+
+.dropdown-option.active { box-shadow: var(--inset); }
+
+.dropdown-option[aria-selected="true"] { color: var(--accent-light); font-weight: 600; }
+
+.dropdown-option[aria-selected="true"]::before {
+  content: "";
+  position: absolute;
+  left: 13px;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  transform: translateY(-50%);
+}
+
+.control-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.field { margin-top: 16px; }
+
+.field-label {
+  display: block;
+  padding-left: 4px;
+  color: var(--muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+/* Amostras de cor: círculos em relevo; o escolhido afunda e ganha um anel laranja. */
+.swatches {
+  display: flex;
+  gap: 12px;
+  margin-top: 8px;
+  padding-left: 2px;
+}
+
+.swatch {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: var(--raised-small);
+  cursor: pointer;
+}
+
+.swatch input {
+  position: absolute;
+  inset: 0;
+  margin: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.swatch-dot {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--swatch);
+  box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+/* "Original": círculo vazio cortado por uma diagonal. */
+.swatch-original {
+  background: linear-gradient(135deg, transparent 45%, var(--muted) 45%, var(--muted) 55%, transparent 55%);
+  box-shadow: inset 0 0 0 2px var(--muted);
+}
+
+.swatch:has(input:checked) { box-shadow: var(--inset), 0 0 0 2px var(--accent); }
+.swatch:has(input:focus-visible) { outline: 2px solid var(--accent-light); outline-offset: 3px; }
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.no-background #transparency,
+.no-background label[for="transparency"],
+.no-background #transparency-value { opacity: 0.4; }
+
+input[type="range"]:disabled { cursor: not-allowed; }
+
+output {
+  padding: 4px 10px;
+  border-radius: 8px;
+  color: var(--accent-light);
+  background: var(--bg);
+  box-shadow: var(--raised-small);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* Trilha afundada com preenchimento laranja em degradê até o valor atual. */
+input[type="range"] {
+  --fill: 0%;
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: 10px;
+  margin: 14px 0 4px;
+  border-radius: 999px;
+  background:
+    linear-gradient(90deg, var(--accent), var(--accent-light)) no-repeat 0 0 / var(--fill) 100%,
+    var(--bg);
+  box-shadow: inset 2px 2px 4px var(--shadow-dark), inset -2px -2px 4px var(--shadow-light);
+  cursor: pointer;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--bg);
+  box-shadow: var(--raised-small), inset 0 0 0 6px var(--bg), inset 0 0 0 11px var(--accent);
+}
+
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--text);
+  background: var(--bg);
+  box-shadow: var(--raised);
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: box-shadow 0.15s, color 0.15s;
+}
+
+button:hover { color: var(--accent-light); }
+button:active { box-shadow: var(--inset); }
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.note {
+  margin: 18px 0 0;
+  padding: 10px 14px;
+  border-radius: 12px;
+  color: var(--accent-light);
+  box-shadow: var(--inset);
+  font-size: 0.84rem;
+  line-height: 1.45;
+}
+
+section .note:empty { display: none; }
+
+.status {
+  min-height: 1.2em;
+  margin: 12px 0 0;
+  color: var(--accent-light);
+  font-size: 0.84rem;
+  text-align: center;
+}

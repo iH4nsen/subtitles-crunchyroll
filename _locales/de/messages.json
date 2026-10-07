@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Untertitel anpassen für Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Zeigt separate Untertitel mit eigener Größe und Sprache an."
+  },
+  "popupTitle": {
+    "message": "Untertitel anpassen"
+  },
+  "language": {
+    "message": "Sprache"
+  },
+  "languageAuto": {
+    "message": "Automatisch"
+  },
+  "size": {
+    "message": "Größe"
+  },
+  "textColor": {
+    "message": "Textfarbe"
+  },
+  "colorOriginal": {
+    "message": "Original"
+  },
+  "colorWhite": {
+    "message": "Weiß"
+  },
+  "colorYellow": {
+    "message": "Gelb"
+  },
+  "colorCyan": {
+    "message": "Cyan"
+  },
+  "colorGreen": {
+    "message": "Grün"
+  },
+  "font": {
+    "message": "Schriftart"
+  },
+  "fontOriginal": {
+    "message": "Original der Folge"
+  },
+  "fontEasyRead": {
+    "message": "Leicht lesbar"
+  },
+  "fontModern": {
+    "message": "Modern"
+  },
+  "fontRounded": {
+    "message": "Abgerundet"
+  },
+  "fontSerif": {
+    "message": "Serifen"
+  },
+  "background": {
+    "message": "Hintergrund"
+  },
+  "backgroundOriginal": {
+    "message": "Original (Umriss)"
+  },
+  "backgroundBlack": {
+    "message": "Schwarz"
+  },
+  "backgroundGray": {
+    "message": "Grau"
+  },
+  "backgroundNavy": {
+    "message": "Marineblau"
+  },
+  "backgroundTransparency": {
+    "message": "Hintergrundtransparenz"
+  },
+  "reset": {
+    "message": "Standard wiederherstellen"
+  },
+  "statusNoTrack": {
+    "message": "Kein separater Untertitel in dieser Sprache."
+  },
+  "statusNoCleanVideo": {
+    "message": "Für diese Folge ist kein Video ohne eingebrannte Untertitel verfügbar."
+  },
+  "statusReloadRequired": {
+    "message": "Lade die Folge neu."
+  },
+  "statusTrackError": {
+    "message": "Untertitel konnten nicht geladen werden."
+  },
+  "statusRendererError": {
+    "message": "Untertitel konnten nicht angezeigt werden."
+  },
+  "saveError": {
+    "message": "Speichern fehlgeschlagen. Bitte erneut versuchen."
+  },
+  "rendererFrameTitle": {
+    "message": "Vergrößerte Untertitel"
+  }
+}

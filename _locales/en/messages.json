@@ -1,0 +1,98 @@
+{
+  "extName": {
+    "message": "Subtitle Adjuster for Crunchyroll"
+  },
+  "extDescription": {
+    "message": "Shows separate subtitles with their own size and language."
+  },
+  "popupTitle": {
+    "message": "Adjust subtitles"
+  },
+  "language": {
+    "message": "Language"
+  },
+  "languageAuto": {
+    "message": "Automatic"
+  },
+  "size": {
+    "message": "Size"
+  },
+  "textColor": {
+    "message": "Text color"
+  },
+  "colorOriginal": {
+    "message": "Original"
+  },
+  "colorWhite": {
+    "message": "White"
+  },
+  "colorYellow": {
+    "message": "Yellow"
+  },
+  "colorCyan": {
+    "message": "Cyan"
+  },
+  "colorGreen": {
+    "message": "Green"
+  },
+  "font": {
+    "message": "Font"
+  },
+  "fontOriginal": {
+    "message": "Episode default"
+  },
+  "fontEasyRead": {
+    "message": "Easy reading"
+  },
+  "fontModern": {
+    "message": "Modern"
+  },
+  "fontRounded": {
+    "message": "Rounded"
+  },
+  "fontSerif": {
+    "message": "Serif"
+  },
+  "background": {
+    "message": "Background"
+  },
+  "backgroundOriginal": {
+    "message": "Original (outline)"
+  },
+  "backgroundBlack": {
+    "message": "Black"
+  },
+  "backgroundGray": {
+    "message": "Gray"
+  },
+  "backgroundNavy": {
+    "message": "Navy blue"
+  },
+  "backgroundTransparency": {
+    "message": "Background transparency"
+  },
+  "reset": {
+    "message": "Restore defaults"
+  },
+  "statusNoTrack": {
+    "message": "No separate subtitle in this language."
+  },
+  "statusNoCleanVideo": {
+    "message": "No clean video available for this episode."
+  },
+  "statusReloadRequired": {
+    "message": "Reload the episode."
+  },
+  "statusTrackError": {
+    "message": "Failed to load the subtitle."
+  },
+  "statusRendererError": {
+    "message": "Failed to display the subtitle."
+  },
+  "saveError": {
+    "message": "Couldn't save. Please try again."
+  },
+  "rendererFrameTitle": {
+    "message": "Enlarged subtitles"
+  }
+}
