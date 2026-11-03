@@ -82,3 +82,9 @@ test("mantém a resposta original quando não existe fluxo limpo", async () => {
   const body = await fetchPlayback(loadHook(withoutClean, ENABLED));
   assert.equal(body.hardSubs["pt-BR"].url, BURNED_IN_URL);
 });
+
+test("reconhece o endpoint /playback/v4 usado pelo player atual", async () => {
+  const hook = loadHook(playback, ENABLED);
+  const body = await (await hook.window.fetch("https://www.crunchyroll.com/playback/v4/x/web/edge/play?locale=pt-BR")).json();
+  assert.equal(body.hardSubs["pt-BR"].url, CLEAN_URL);
+});

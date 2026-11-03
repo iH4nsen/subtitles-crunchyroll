@@ -30,7 +30,7 @@ The subtitle is placed between the video and the player controls, so the playbac
 
 - Availability of tracks and of a clean stream varies by episode, language and region. The extension does not create editable text from subtitles burned into the image.
 - The ASS renderer uses `libass-wasm` bundled with the extension. For VTT, the extension converts the lines to ASS; advanced VTT formatting may not be preserved.
-- The extension depends on the structure of Crunchyroll's `/playback/v3` response. Changes to the site may require an update.
+- The extension depends on the structure of Crunchyroll's `/playback/v4` response. Changes to the site may require an update.
 - Capturing and switching the stream happens when the page loads. If the response is not captured, the original video remains available; separate mode will have no effect until a compatible version is released.
 - To troubleshoot, inspect the `data-cr-independent-status` attribute of the page's `<html>` element. Values such as `no-track`, `no-clean-video`, `track-error` and `renderer-error` indicate which step failed.
 - On October 6, 2026, separate mode was tested in Edge on episode `GE00384327JAJP`: the player requested the clean stream, the Portuguese ASS subtitle appeared over the video, 150% scaling was applied and the subtitle stayed visible when entering and leaving full screen. Other episodes, languages and browsers still need validation.
@@ -72,7 +72,7 @@ A legenda é colocada entre o vídeo e os controles do player. Assim, a barra de
 
 - A disponibilidade de faixas e de um fluxo limpo varia conforme o episódio, idioma e região. A extensão não cria um texto editável a partir de uma legenda gravada na imagem.
 - O renderizador ASS usa `libass-wasm` empacotado na extensão. Para VTT, a extensão converte as falas para ASS; formatações avançadas de VTT podem não ser preservadas.
-- A extensão depende da estrutura da resposta `/playback/v3` da Crunchyroll. Mudanças no site podem exigir atualização.
+- A extensão depende da estrutura da resposta `/playback/v4` da Crunchyroll. Mudanças no site podem exigir atualização.
 - A captura e a troca do fluxo acontecem no carregamento da página. Se a resposta não for capturada, o vídeo original continua disponível; o modo separado não terá efeito até uma versão compatível.
 - Para diagnosticar, inspecione o atributo `data-cr-independent-status` do elemento `<html>` na página. Valores como `no-track`, `no-clean-video`, `track-error` e `renderer-error` indicam a etapa que falhou.
 - Em 6 de outubro de 2026, o modo separado foi testado no Edge no episódio `GE00384327JAJP`: o player solicitou o fluxo limpo, a legenda ASS em português apareceu sobre o vídeo, a escala de 150% foi aplicada e a legenda continuou visível ao entrar e sair da tela cheia. Outros episódios, idiomas e navegadores ainda dependem de validação.

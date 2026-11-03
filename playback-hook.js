@@ -1,7 +1,7 @@
 (() => {
   "use strict";
 
-  const PLAYBACK_PATH = /\/playback\/v3\/[^/]+\/web\/[^/]+\/play(?:[?#]|$)/i;
+  const PLAYBACK_PATH = /\/playback\/v\d+\/[^/]+\/web\/[^/]+\/play(?:[?#]|$)/i;
   const EVENT = "cr-independent-playback";
   let enabled = false;
   let preferredLanguage = "auto";
